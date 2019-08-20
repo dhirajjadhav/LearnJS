@@ -73,3 +73,33 @@ Sample Questions
     }
     console.log(a); // output ?
     
+15. What is difference between var and let? comapare difference using example.
+
+16. What is Hoisting in JS? Explain with example. ( examples for variable & functions )
+
+17. let arr = [ 10, 20, 30]
+	insert 40 & 50 to end of array elements such that arr = [ 10, 20, 30, 40, 50 ]
+
+18. let arr = [ 10, 20, 30, 40, 50 ]
+	remove 40 & 50 from end of array such that arr = [ 10, 20, 30]
+
+19. What is string split and slice methods explain with examples ?
+
+20. let arr = [ 20, 50, 40, 10, 30]
+	sort above array elements by increasing order.
+
+21. let a = 10, b = 20;
+	swap the values of two variables.
+
+22. What is meaning of following statements?
+	let sum = 0;
+	sum += 10;
+
+23. What is boolean? Is it variable type ? explain following
+	let a = 10;
+	let b = a !==10 ;
+	console.log(b);
+
+24. What are common features of any programming language?
+
+25. What is scope of variable. Explain block scope and global scope of variable with example.
