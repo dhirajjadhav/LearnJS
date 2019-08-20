@@ -103,3 +103,74 @@ Sample Questions
 24. What are common features of any programming language?
 
 25. What is scope of variable. Explain block scope and global scope of variable with example.
+
+26. You have given a number and check if it is even or odd
+	var a = 10;
+
+26. list number of prime numbers between 1 to 50 and print the list to console;
+
+27. Explain if else statement with example.
+
+28. Explain switch case statement with example.
+
+29. When to use swich case instead of if else statements? explain with example.
+
+30. what is output of program?
+	
+	let a = 10;
+	switch(a)
+	{
+		case 5:
+			console.log(5);
+		case 15:
+			console.log(15);
+		default:
+			cosole.log(a);	
+	}
+	
+31. what is output of program?
+	let a = 10;
+	switch(a)
+	{
+		case 5:
+			console.log(5);
+		case 15:
+			console.log(15);
+		case 20:
+			console.log(20);
+	}
+	
+31. Fill the empty space
+	let a = 10;
+	switch(a)
+	{
+		case 5:
+			console.log(5);
+		case __:
+			console.log(10);
+		case 20:
+			console.log(20);
+	}
+	// output : 10
+
+32. what are logical operators is JS? Explain && and || operators with examples.
+
+33. What is output of following program?
+	let a = 100; // also verify for a = 87
+	if( a % 5 == 0 )
+		console.log("a is divisible by 5");
+	else
+		console.log("a is not divisible by 5");
+
+33. What is output of following program?
+	let a = 55; // also verify for a = 87, 100
+	if( a % 5 === 0 && a % 10 === 0 )
+		console.log("a is divisible by 5 and 10");
+	else if(a % 5 === 0)
+		console.log("a is divisible by 5");
+	else
+		console.log("a is not divisible by 5 and 10");
+		
+34. what is difference between == and === ?( equal comparison or exact equal comparison )
+
+35. what are different types of operators in JS? Explain each with examples.
