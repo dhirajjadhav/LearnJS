@@ -174,3 +174,41 @@ Sample Questions
 34. what is difference between == and === ?( equal comparison or exact equal comparison )
 
 35. what are different types of operators in JS? Explain each with examples.
+
+
+36. Print following output to console.
+	*
+	**
+	***
+	****
+	*****
+
+37. Print following output to console.
+	*****
+	****
+	***
+	**
+	*
+	
+38. Print following output to console.
+	    *
+	   **
+	  ***
+	 ****
+	*****
+
+39. Print following output to console.
+	*****
+	 ****
+	  ***
+	   **
+	    *
+
+40. Print following output to console.
+	  *
+	 * *
+	* * *
+       * * * *
+      * * * * *
+  
+  
