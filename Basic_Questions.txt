@@ -211,4 +211,72 @@ Sample Questions
        * * * *
       * * * * *
   
-  
+ 
+41. What are different types of loops in JS? explain each using example.
+
+42. Output of program?
+	for( let a = 0; a < 5; a++)
+	{
+		console.log(a);	
+	}
+	console.log(a); // Output ?
+
+43. for( var a = 0; a < 5; a++)
+	{
+		console.log(a);	
+	}
+	console.log(a); // Output ?
+	
+
+43. let a = 0;
+	for(; a < 5; a++)
+	{
+		console.log(a);	
+	}
+	console.log(a); // Output ?
+
+44. Find missing code? // so that sum is addition of numbers from 5 to 20
+	for(    ;    < 20;  )
+	{
+		sum = sum + i;
+	}
+	console.log(sum);
+
+45. what happen if we run following code?
+   while(true)
+   {
+		console.log("Running while loop");
+   }
+
+46. What is basic syntax for all types of loops? explain.
+
+47. Fill in the blanks for following program for sum of numbers fron 10 to 15
+	var a = 10;
+	var sum = 0;
+	while( a <= 15)
+	{
+		______________;
+		______________;
+	}
+	
+48. write program to calculate factorial of number 10. using for and while loop.
+
+49. Explain each variable and its ideal scope for variable availability? ( variable life cycle. )
+	var a = 10;
+	{
+		var b = 20;
+		{
+			var c = 30;
+		}
+	}
+
+50. Can we use let instead of var? comapare with Question 49.
+	var a = 10;
+	{
+		var b = 20;
+		{
+			var c = 30;
+		}
+	}
+
+
