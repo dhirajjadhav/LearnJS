@@ -1,1 +1,75 @@
+// Sample questions for study.
+Sample Questions
+1. What is variable? List all types of variables supported in JS.
 
+2. What is output of following program ?
+	let a = 10;
+	console.log(a);
+	
+3. What is output of following program ?
+	let a = 10;
+	console.log(typeof(a));
+	a = "ABCD";
+	console.log(typeof(a));
+	a = ["A", 10]
+	console.log(typeof(a));
+	a = {
+			A : "A",
+			B : "B"
+		}
+	console.log(typeof(a));
+	a = [
+			{
+				A : "A",
+				B : "B"
+			},
+			{
+				A : "A",
+				B : "B"
+			}
+		]
+	console.log(typeof(a));
+	
+4. What is JS Object? Explain object properties & behaviours with example.
+
+5. let a = 10 === 10
+   console.log(a);
+
+6. let a = 10;
+   let s = "ABC"
+   
+   let d = a + s;
+   console.log(d + typeof(d));
+
+8. let s = "10";
+   let n = _____(s); // to get number
+   console.log(n); //Number
+
+9. What is Array? What are some comon methods supported by array? Explain with example.
+
+10. What is string? what are some comon methods supported by string? Explain with example;
+
+11. Explain line by line. ( Add comment in the front. )
+	let a = 10;
+	a++;
+	a = a + 10;
+	console.log(a + typeof(a));
+
+12. let a = 10;
+	let s = ________(a); // convert a to string
+	console.log(s, typeof(s));
+
+13. let a = 10;
+	{
+		let a = 20;
+		console.log(a);
+	}
+	console.log(a);
+  
+ 14. 
+    {
+      let a = 10;
+      console.log(a); // output ?
+    }
+    console.log(a); // output ?
+    
