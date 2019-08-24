@@ -359,3 +359,90 @@ Sample Questions
 	// output 6
 	call the function and print the output here.
 
+69. What is recurssive function? explain with example. ( refer google)
+
+70. 
+	explain following program line by line. ( debug this program and try to understand.)
+	
+	function recFunction(num)
+	{
+		while(num > 0)
+		{
+			num--;
+			recFunction(num);		
+		}	
+	}
+	
+	recFunction(5);
+
+71. what is return value of any function? how it can be use?
+
+72. 
+	function myFunction()
+	{
+		let a = 10;
+		let b = "string";
+	
+		_________;
+	}
+	
+	fill the blank spaces such that, function should returns
+		1. number
+		2. string
+		3. boolean
+		
+73. Write function which will returns random number
+	1. from 0 to < 10. ( domain [0,10))
+	2. between 0 and 10. ( domain (0,10))
+	3. from 0 to 10. ( domain [0,10])
+	
+		
+73. explain following expression.
+	
+	// get random number from 1 to 10. ( i.e. [1,10] )
+	function getRandNumber()
+	{
+		let num = Math.floor((Math.random()*10))+1;  // explain this expression
+		return num;	
+	}
+	
+	// Explain following expression i.e. how actually it will get executed.
+	let sum = getRandNumber() + ( getRandNumber() / getRandNumber() ) - getRandNumber * 0.1;
+	
+74. Explain in brief the function pass as argument to another function?
+	Explain above with examples considering functions passed as agruments are
+		1. Named function.
+		2. Unnamed function.
+		3. inline function. ( this also called lamada defination. )
+		
+75. Explain Callback function? Why it is very usefull in developement? ( use google for reference )
+
+76. function anyFunction()
+	{
+		console.log("Any function is called..");
+	}
+	
+	function myFunction(num, cb)
+	{
+		__________; //log cb here... what is value & type of cb? 
+		__________; call callback function how
+		
+		return num++;
+	}
+	
+77. explain following
+
+	function myFunction(num)
+	{
+		return (num + 5)/2 * 6;   // explain this line in details.	
+	}
+	
+	// call function here for reference.
+	
+78. what is difference between prompt, alert and console.log functions. Explain with examples.
+
+79. Write a function which will take length, width and height of rectangle as arguments. Returns volume of rectangle as value.
+
+80. How to accept input from user between 1 to 10. Verfiy value is ok, if not then show message to user that num is not valid.
+	( hint : use prompt and alert functions )
+		
