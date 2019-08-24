@@ -445,4 +445,34 @@ Sample Questions
 
 80. How to accept input from user between 1 to 10. Verfiy value is ok, if not then show message to user that num is not valid.
 	( hint : use prompt and alert functions )
+
+81. Explain following code. ( hint: use debugger )
+
+	function myFunction(num, cb)
+	{
+		if(num < 0 )
+			cb("Number is Negative..!");
 		
+		console.log(`${num} is possitive number.`);
+	}
+	
+	myFunction(10, function(msg){
+		console.log(msg)
+	});
+	
+	Explain above code line by line.
+
+82. Refering to above question. Can we reuse callback function for
+		passing following function calls.
+		
+	myFunction(12, function(msg){
+		console.log(msg)
+	});
+	
+	myFunction(0, function(msg){
+		console.log(msg)
+	});
+	
+	myFunction(-5, function(msg){
+		console.log(msg)
+	});
