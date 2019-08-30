@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+		background-color: #fff;
+		color: #111;
+		margin: 0px;
+		overflow: hidden;
+		font-family: Monospace;
+		font-size: 20px;
+		position: absolute;
+	}
+	
+	#info2 {
+		position: absolute;
+		bottom: 50px; width: 100%;
+		text-align: center;
+		color: #d12424
+	}
+	a {color: 0x005500}
+</style>
+</head>
+
+<body> 
+<div id="info2">
+	2-D Demo
+</div>
+
+<script src="./rs/three.min.js"></script>
+
+<script> 
+  document.oncontextmenu=function(){return false;} 
+</script>
+
+<script> 
+		var fs = require('fs');
+		
+</script>
+	  
+
+
+<script>
+// Define Constants
+var maxCoordLimit = 10;
+
+// Defaine Global Variables
+var scene, renderer, camera, raycaster, mouse;
+
+init();
+//---------------------------------------------------------
+
+
+//---------------------------------------------------------
+animate();
+
+function init()
+{
+	var width = window.innerWidth;
+	var height = window.innerHeight;
+
+	renderer = new THREE.WebGLRenderer({antialias: true});
+	renderer.setSize (width, height);
+	renderer.setClearColor (0xeeeeee);
+	
+	document.body.appendChild (renderer.domElement);
+	
+	scene = new THREE.Scene();
+
+	camera = new THREE.OrthographicCamera (-15,15,15,-15, 1, 100);
+	camera.position.x = 0;
+	camera.position.y = 0;
+	camera.position.z = 50;
+	camera.lookAt (new THREE.Vector3(0,0,0));
+
+	var gridXZ = new THREE.GridHelper(maxCoordLimit, 1);
+	gridXZ.setColors( new THREE.Color(0xff0000), new THREE.Color(0x999999) );
+	//gridXZ.material = new THREE.LineDashedMaterial( { color: 0x00cc00, dashSize: 1, gapSize: 1 } );
+	gridXZ.rotation.x = Math.PI/2;
+	scene.add(gridXZ);
+
+	raycaster = new THREE.Raycaster();
+	mouse = new THREE.Vector2();
+
+	window.addEventListener( 'mousedown', onMouseDown, false );
+	window.addEventListener( 'mousemove', onMouseMove, false );
+
+}
+
+function animate()
+{
+	requestAnimationFrame ( animate );  
+	render(); 
+}
+
+function onWindowResize()
+{
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setSize (window.innerWidth, window.innerHeight);
+}
+
+function render()
+{
+	console.log ("Scene has: " + scene.children.length);
+	
+	renderer.render (scene, camera);
+}
+
+function onMouseDown( event ) {
+
+	// calculate mouse position in normalized device coordinates
+	// (-1 to +1) for both components
+
+	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+	// Calculate the mouse postions to actual display points for use
+	// As total screen is divided into 30 divisions along length and height
+	var myPoint = new THREE.Vector3(mouse.x*15, mouse.y*15,0);
+
+	if((myPoint.x < maxCoordLimit && myPoint.y < maxCoordLimit) && (myPoint.x > -maxCoordLimit && myPoint.y > -maxCoordLimit))
+	{
+		var geometry = new THREE.CircleGeometry( 0.05, 32 );
+		var material = new THREE.MeshBasicMaterial( { color: 0x115500 } );
+		var point_2d = new THREE.Mesh( geometry, material );
+
+		// Tralslate to clicked position
+		point_2d.position.x = myPoint.x;
+		point_2d.position.y = myPoint.y;
+
+		scene.add( point_2d );
+	}
+}
+
+function onMouseMove(event){
+	// calculate mouse position in normalized device coordinates
+	// (-1 to +1) for both components
+
+	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+	// calculate objects intersecting the picking ray
+	var intersects = raycaster.intersectObjects( scene.children );
+
+	for ( var i = 0; i < intersects.length; i++ ) {
+
+		intersects[ i ].object.material.color.set( 0xffff00 );
+
+	}
+
+}
+
+</script>
+</body>
+
+</html>
